@@ -1,6 +1,7 @@
 package com.assignment.restApi.services.implementations;
 
 import com.assignment.restApi.entities.Employee;
+import com.assignment.restApi.exceptions.EmployeeNotFoundException;
 import com.assignment.restApi.repository.EmployeeRepository;
 import org.springframework.core.io.Resource;
 import org.springframework.beans.factory.annotation.Value;
@@ -38,7 +39,7 @@ public class FileService {
         if (!Files.exists(uploadPath)) {
             Files.createDirectories(uploadPath);
         }
-        Employee emp = employeeRepository.findById(Id).orElseThrow(() -> new IllegalArgumentException("Employee Not found"));
+        Employee emp = employeeRepository.findById(Id).orElseThrow(() -> new EmployeeNotFoundException("Employee Not found"));
         String fileName = new String(emp.getId().toString() + "profile_img.png");
         Path filePath = uploadPath.resolve(fileName);
         Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
@@ -48,7 +49,7 @@ public class FileService {
     }
 
     public ResponseEntity<Resource> getProfileImage(Long Id) throws MalformedURLException {
-        Employee emp = employeeRepository.findById(Id).orElseThrow(() -> new IllegalArgumentException("Employee Not found"));
+        Employee emp = employeeRepository.findById(Id).orElseThrow(() -> new EmployeeNotFoundException("Employee Not found"));
         String fileName = new String(emp.getId().toString() + "profile_img.png");
         Path filePath = Paths.get(basePath).resolve(fileName);
         Resource resource = new UrlResource(filePath.toUri());

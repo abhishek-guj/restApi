@@ -3,6 +3,7 @@ package com.assignment.restApi.services.implementations;
 import com.assignment.restApi.dto.request.EmployeeReqDTO;
 import com.assignment.restApi.dto.response.EmployeeDTO;
 import com.assignment.restApi.entities.Employee;
+import com.assignment.restApi.exceptions.EmployeeNotFoundException;
 import com.assignment.restApi.mapper.EntityMapper;
 import com.assignment.restApi.repository.EmployeeRepository;
 import org.modelmapper.ModelMapper;
@@ -31,7 +32,7 @@ public class EmployeeService {
     }
 
     public EmployeeDTO getEmployeeById(Long id) {
-        Employee employee = employeeRepository.findById(id).orElse(null);
+        Employee employee = employeeRepository.findById(id).orElseThrow(()->new EmployeeNotFoundException("Employee Not Found"));
         return entityMapper.toEmployeeDTO(employee);
     }
 
@@ -47,7 +48,7 @@ public class EmployeeService {
 
 
         Employee exists = employeeRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Employee Not Found"));
+                .orElseThrow(() -> new EmployeeNotFoundException("Employee Not Found"));
 
 
         Employee employee = entityMapper.toEmployee(dto);
@@ -60,7 +61,7 @@ public class EmployeeService {
 
     public void deleteEmployee(Long id) {
         Employee employee = employeeRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Employee Not Found"));
+                .orElseThrow(() -> new EmployeeNotFoundException("Employee Not Found"));
 
 //        employee.set_deleted(true);
         employeeRepository.delete(employee);
