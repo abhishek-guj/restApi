@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -28,6 +29,8 @@ public class EmployeeController {
 //            ,@CookieValue(value = "access_token") String username
     ) {
         System.out.println(request);
+        System.out.println(Arrays.toString(request.getCookies()));
+        System.out.println(Arrays.stream(request.getCookies()).findAny());
 //        System.out.println(username);
         return employeeService.getAllEmployees();
     }

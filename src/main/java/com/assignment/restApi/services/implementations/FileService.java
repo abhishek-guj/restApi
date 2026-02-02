@@ -55,7 +55,6 @@ public class FileService {
         Resource resource = new UrlResource(filePath.toUri());
         if (resource.exists()) {
             HttpHeaders headers = new HttpHeaders();
-            // Use set() to replace any existing Cache-Control header
             headers.set("Cache-Control", "public, max-age=3600");
             return ResponseEntity.ok()
                     .headers(headers)
