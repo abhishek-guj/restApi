@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 public class ApiErrorResponse {
     private LocalDateTime timestamp;
     private String message;
-    private String details;
+    private Object details;
 
     public ApiErrorResponse(LocalDateTime timestamp, String message, String details) {
         this.timestamp = timestamp;

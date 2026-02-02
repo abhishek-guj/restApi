@@ -4,6 +4,7 @@ import com.assignment.restApi.dto.request.EmployeeReqDTO;
 import com.assignment.restApi.dto.request.EmployeeUpdateDTO;
 import com.assignment.restApi.dto.response.EmployeeDTO;
 import com.assignment.restApi.services.implementations.EmployeeService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,11 @@ public class EmployeeController {
     }
 
     @GetMapping
-    public List<EmployeeDTO> getAllEmployees() {
+    public List<EmployeeDTO> getAllEmployees(HttpServletRequest request
+//            ,@CookieValue(value = "access_token") String username
+    ) {
+        System.out.println(request);
+//        System.out.println(username);
         return employeeService.getAllEmployees();
     }
 
@@ -50,7 +55,7 @@ public class EmployeeController {
     }
 
     @DeleteMapping("/{Id}")
-    public ResponseEntity<Void> deleteEmployee(@PathVariable Long Id){
+    public ResponseEntity<Void> deleteEmployee(@PathVariable Long Id) {
 
         employeeService.deleteEmployee(Id);
         return ResponseEntity.ok().build();
