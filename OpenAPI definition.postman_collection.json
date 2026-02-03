@@ -1,0 +1,774 @@
+{
+  "info": {
+    "_postman_id": "623320e8-770d-4ac9-bb12-7179854ed018",
+    "name": "OpenAPI definition Copy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51878422",
+    "_collection_link": "https://go.postman.co/collection/51878422-623320e8-770d-4ac9-bb12-7179854ed018?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "employees",
+          "item": [
+            {
+              "name": "{Id}",
+              "item": [
+                {
+                  "name": "get Employee By Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/employees/:Id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "employees",
+                        ":Id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "Id",
+                          "value": "4688"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/employees/:Id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "employees",
+                            ":Id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "Id",
+                              "value": "4688"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "update Employee",
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/employees/:Id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "employees",
+                        ":Id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "Id",
+                          "value": "4688"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/employees/:Id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "employees",
+                            ":Id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "Id",
+                              "value": "4688"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "delete Employee",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/employees/:Id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "employees",
+                        ":Id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "Id",
+                          "value": "4688"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/employees/:Id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "employees",
+                            ":Id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "Id",
+                              "value": "4688"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    }
+                  ]
+                },
+                {
+                  "name": "partial Update Employee",
+                  "request": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/employees/:Id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "employees",
+                        ":Id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "Id",
+                          "value": "4688"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/employees/:Id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "employees",
+                            ":Id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "Id",
+                              "value": "4688"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "get All Employees",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/employees",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "employees"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/employees",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "employees"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"employeeFName\": \"string\",\n    \"employeeLName\": \"string\",\n    \"department\": \"string\"\n  },\n  {\n    \"employeeFName\": \"string\",\n    \"employeeLName\": \"string\",\n    \"department\": \"string\"\n  }\n]"
+                }
+              ]
+            },
+            {
+              "name": "create Employee",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/employees",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "employees"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/employees",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "employees"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "files",
+          "item": [
+            {
+              "name": "{Id}",
+              "item": [
+                {
+                  "name": "profile-img",
+                  "item": [
+                    {
+                      "name": "get Profile Image",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/files/:Id/profile-img",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "files",
+                            ":Id",
+                            "profile-img"
+                          ],
+                          "variable": [
+                            {
+                              "key": "Id",
+                              "value": "4688"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/files/:Id/profile-img",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "files",
+                                ":Id",
+                                "profile-img"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "Id",
+                                  "value": "4688"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "string"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "upload Profile Image",
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"file\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/files/:Id/profile-img",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "files",
+                            ":Id",
+                            "profile-img"
+                          ],
+                          "variable": [
+                            {
+                              "key": "Id",
+                              "value": "4688"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"file\": \"string\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/files/:Id/profile-img",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "files",
+                                ":Id",
+                                "profile-img"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "Id",
+                                  "value": "4688"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "body": ""
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "auth",
+          "item": [
+            {
+              "name": "sign-in",
+              "item": [
+                {
+                  "name": "authenticate User",
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/auth/sign-in",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "auth",
+                        "sign-in"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/auth/sign-in",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "auth",
+                            "sign-in"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    },
+                    {
+                      "name": "authenticate User",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/auth/sign-in",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "auth",
+                            "sign-in"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        {
+                          "key": "Set-Cookie",
+                          "value": "access_token=adksjlada_asdadsakda_asdlkasdjlkasjdla; Max-Age=120; Expires=Mon, 02 Feb 2026 14:15:04 GMT; Path=/; HttpOnly"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "0"
+                        },
+                        {
+                          "key": "Date",
+                          "value": "Mon, 02 Feb 2026 14:13:04 GMT"
+                        },
+                        {
+                          "key": "Keep-Alive",
+                          "value": "timeout=60"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
