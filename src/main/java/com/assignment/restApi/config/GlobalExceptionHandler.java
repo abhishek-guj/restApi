@@ -3,8 +3,15 @@ package com.assignment.restApi.config;
 
 import com.assignment.restApi.exceptions.EmployeeNotFoundException;
 import com.assignment.restApi.exceptions.ApiErrorResponse;
+<<<<<<< HEAD
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+=======
+import jakarta.validation.ConstraintViolationException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+>>>>>>> ccac54b (new project)
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -21,6 +28,18 @@ public class GlobalExceptionHandler {
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
     }
+<<<<<<< HEAD
+=======
+    @ExceptionHandler(ConstraintViolationException.class)
+    public ResponseEntity<ApiErrorResponse> handleConstraintViolationException(ConstraintViolationException ex) {
+        ApiErrorResponse errorResponse = new ApiErrorResponse(
+                LocalDateTime.now(),
+                ex.getMessage(),
+                "Input fields missing........"
+        );
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+    }
+>>>>>>> ccac54b (new project)
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiErrorResponse> handleBaseException(Exception ex) {

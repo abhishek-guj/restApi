@@ -12,7 +12,11 @@ public class JWTUtil {
     String jwtToken;
 
     @Bean
+<<<<<<< HEAD
     public String getToken(){
+=======
+    public String generateToken(){
+>>>>>>> ccac54b (new project)
         return jwtToken;
     }
 

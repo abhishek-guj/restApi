@@ -43,6 +43,7 @@ public class EmployeeService {
     }
 
     public EmployeeDTO updateEmployee(Long id, EmployeeReqDTO dto) {
+<<<<<<< HEAD
 
         // ??? todo partial updates
 
@@ -55,6 +56,15 @@ public class EmployeeService {
         employee.setId(exists.getId());
 
 
+=======
+        
+        Employee exists = employeeRepository.findById(id)
+                .orElseThrow(() -> new EmployeeNotFoundException("Employee Not Found"));
+
+        Employee employee = entityMapper.toEmployee(dto);
+        employee.setId(exists.getId());
+
+>>>>>>> ccac54b (new project)
         employeeRepository.save(employee);
         return entityMapper.toEmployeeDTO(employee);
     }

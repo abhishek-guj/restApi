@@ -9,7 +9,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
+<<<<<<< HEAD
 @Table
+=======
+@Table(name = "users")
+>>>>>>> ccac54b (new project)
 @Getter
 @Setter
 public class User {
@@ -18,11 +22,20 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
+<<<<<<< HEAD
     @NotBlank
     private String username;
 
     @Email
     @NotEmpty
     private String email;
+=======
+    // @NotBlank
+    // private String username;
+
+    // @Email
+    // @NotEmpty
+    // private String email;
+>>>>>>> ccac54b (new project)
 
 }
