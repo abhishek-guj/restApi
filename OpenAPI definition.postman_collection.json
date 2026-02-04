@@ -1,53 +1,27 @@
 {
   "info": {
-    "_postman_id": "623320e8-770d-4ac9-bb12-7179854ed018",
-    "name": "OpenAPI definition Copy",
+    "_postman_id": "35969e33-f7b0-453e-a614-8ee91c647da7",
+    "name": "OpenAPI definition",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "51878422",
-    "_collection_link": "https://go.postman.co/collection/51878422-623320e8-770d-4ac9-bb12-7179854ed018?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/51878422-35969e33-f7b0-453e-a614-8ee91c647da7?source=collection_link"
   },
   "item": [
     {
       "name": "api",
       "item": [
         {
-          "name": "employees",
+          "name": "v1",
           "item": [
             {
-              "name": "{Id}",
+              "name": "employees",
               "item": [
                 {
-                  "name": "get Employee By Id",
-                  "request": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "*/*"
-                      }
-                    ],
-                    "url": {
-                      "raw": "{{baseUrl}}/api/employees/:Id",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "api",
-                        "employees",
-                        ":Id"
-                      ],
-                      "variable": [
-                        {
-                          "key": "Id",
-                          "value": "4688"
-                        }
-                      ]
-                    }
-                  },
-                  "response": [
+                  "name": "{Id}",
+                  "item": [
                     {
-                      "name": "OK",
-                      "originalRequest": {
+                      "name": "get Employee By Id",
+                      "request": {
                         "method": "GET",
                         "header": [
                           {
@@ -56,83 +30,152 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/employees/:Id",
+                          "raw": "{{baseUrl}}/api/v1/employees/:Id",
                           "host": [
                             "{{baseUrl}}"
                           ],
                           "path": [
                             "api",
+                            "v1",
                             "employees",
                             ":Id"
                           ],
                           "variable": [
                             {
                               "key": "Id",
-                              "value": "4688"
+                              "value": "3977"
                             }
                           ]
                         }
                       },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "text",
-                      "header": [
+                      "response": [
                         {
-                          "key": "Content-Type",
-                          "value": "*/*"
-                        }
-                      ],
-                      "cookie": [],
-                      "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
-                    }
-                  ]
-                },
-                {
-                  "name": "update Employee",
-                  "request": {
-                    "method": "PUT",
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      },
-                      {
-                        "key": "Accept",
-                        "value": "*/*"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
-                      "options": {
-                        "raw": {
-                          "headerFamily": "json",
-                          "language": "json"
-                        }
-                      }
-                    },
-                    "url": {
-                      "raw": "{{baseUrl}}/api/employees/:Id",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "api",
-                        "employees",
-                        ":Id"
-                      ],
-                      "variable": [
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/employees/:Id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "employees",
+                                ":Id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "Id",
+                                  "value": "3977"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
+                        },
                         {
-                          "key": "Id",
-                          "value": "4688"
+                          "name": "get Employee By Id",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/employees/:Id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "employees",
+                                ":Id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "Id",
+                                  "value": "1"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": null,
+                          "header": [
+                            {
+                              "key": "X-Content-Type-Options",
+                              "value": "nosniff"
+                            },
+                            {
+                              "key": "X-XSS-Protection",
+                              "value": "0"
+                            },
+                            {
+                              "key": "Cache-Control",
+                              "value": "no-cache, no-store, max-age=0, must-revalidate"
+                            },
+                            {
+                              "key": "Pragma",
+                              "value": "no-cache"
+                            },
+                            {
+                              "key": "Expires",
+                              "value": "0"
+                            },
+                            {
+                              "key": "X-Frame-Options",
+                              "value": "DENY"
+                            },
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "Transfer-Encoding",
+                              "value": "chunked"
+                            },
+                            {
+                              "key": "Date",
+                              "value": "Tue, 03 Feb 2026 05:25:03 GMT"
+                            },
+                            {
+                              "key": "Keep-Alive",
+                              "value": "timeout=60"
+                            },
+                            {
+                              "key": "Connection",
+                              "value": "keep-alive"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n    \"employeeFName\": \"NEW\",\n    \"employeeLName\": \"NEW\",\n    \"department\": \"string\"\n}"
                         }
                       ]
-                    }
-                  },
-                  "response": [
+                    },
                     {
-                      "name": "OK",
-                      "originalRequest": {
+                      "name": "update Employee",
+                      "request": {
                         "method": "PUT",
                         "header": [
                           {
@@ -155,139 +198,310 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/employees/:Id",
+                          "raw": "{{baseUrl}}/api/v1/employees/:Id",
                           "host": [
                             "{{baseUrl}}"
                           ],
                           "path": [
                             "api",
+                            "v1",
                             "employees",
                             ":Id"
                           ],
                           "variable": [
                             {
                               "key": "Id",
-                              "value": "4688"
+                              "value": "3977"
                             }
                           ]
                         }
                       },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "text",
-                      "header": [
+                      "response": [
                         {
-                          "key": "Content-Type",
-                          "value": "*/*"
-                        }
-                      ],
-                      "cookie": [],
-                      "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
-                    }
-                  ]
-                },
-                {
-                  "name": "delete Employee",
-                  "request": {
-                    "method": "DELETE",
-                    "header": [],
-                    "url": {
-                      "raw": "{{baseUrl}}/api/employees/:Id",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "api",
-                        "employees",
-                        ":Id"
-                      ],
-                      "variable": [
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/employees/:Id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "employees",
+                                ":Id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "Id",
+                                  "value": "3977"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
+                        },
                         {
-                          "key": "Id",
-                          "value": "4688"
+                          "name": "update Employee",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"employeeFName\": \"put\",\n  \"employeeLName\": \"put\",\n  \"department\": \"put\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/employees/:Id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "employees",
+                                ":Id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "Id",
+                                  "value": "1"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": null,
+                          "header": [
+                            {
+                              "key": "X-Content-Type-Options",
+                              "value": "nosniff"
+                            },
+                            {
+                              "key": "X-XSS-Protection",
+                              "value": "0"
+                            },
+                            {
+                              "key": "Cache-Control",
+                              "value": "no-cache, no-store, max-age=0, must-revalidate"
+                            },
+                            {
+                              "key": "Pragma",
+                              "value": "no-cache"
+                            },
+                            {
+                              "key": "Expires",
+                              "value": "0"
+                            },
+                            {
+                              "key": "X-Frame-Options",
+                              "value": "DENY"
+                            },
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "Transfer-Encoding",
+                              "value": "chunked"
+                            },
+                            {
+                              "key": "Date",
+                              "value": "Tue, 03 Feb 2026 05:25:31 GMT"
+                            },
+                            {
+                              "key": "Keep-Alive",
+                              "value": "timeout=60"
+                            },
+                            {
+                              "key": "Connection",
+                              "value": "keep-alive"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n    \"employeeFName\": \"put\",\n    \"employeeLName\": \"put\",\n    \"department\": \"put\"\n}"
                         }
                       ]
-                    }
-                  },
-                  "response": [
+                    },
                     {
-                      "name": "OK",
-                      "originalRequest": {
+                      "name": "delete Employee",
+                      "request": {
                         "method": "DELETE",
                         "header": [],
                         "url": {
-                          "raw": "{{baseUrl}}/api/employees/:Id",
+                          "raw": "{{baseUrl}}/api/v1/employees/:Id",
                           "host": [
                             "{{baseUrl}}"
                           ],
                           "path": [
                             "api",
+                            "v1",
                             "employees",
                             ":Id"
                           ],
                           "variable": [
                             {
                               "key": "Id",
-                              "value": "4688"
+                              "value": "3977"
                             }
                           ]
                         }
                       },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "text",
-                      "header": [],
-                      "cookie": [],
-                      "body": ""
-                    }
-                  ]
-                },
-                {
-                  "name": "partial Update Employee",
-                  "request": {
-                    "method": "PATCH",
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      },
-                      {
-                        "key": "Accept",
-                        "value": "*/*"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
-                      "options": {
-                        "raw": {
-                          "headerFamily": "json",
-                          "language": "json"
-                        }
-                      }
-                    },
-                    "url": {
-                      "raw": "{{baseUrl}}/api/employees/:Id",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "api",
-                        "employees",
-                        ":Id"
-                      ],
-                      "variable": [
+                      "response": [
                         {
-                          "key": "Id",
-                          "value": "4688"
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/employees/:Id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "employees",
+                                ":Id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "Id",
+                                  "value": "3977"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "body": ""
+                        },
+                        {
+                          "name": "delete Employee",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/employees/:Id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "employees",
+                                ":Id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "Id",
+                                  "value": "3"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": null,
+                          "header": [
+                            {
+                              "key": "X-Content-Type-Options",
+                              "value": "nosniff"
+                            },
+                            {
+                              "key": "X-XSS-Protection",
+                              "value": "0"
+                            },
+                            {
+                              "key": "Cache-Control",
+                              "value": "no-cache, no-store, max-age=0, must-revalidate"
+                            },
+                            {
+                              "key": "Pragma",
+                              "value": "no-cache"
+                            },
+                            {
+                              "key": "Expires",
+                              "value": "0"
+                            },
+                            {
+                              "key": "X-Frame-Options",
+                              "value": "DENY"
+                            },
+                            {
+                              "key": "Content-Length",
+                              "value": "0"
+                            },
+                            {
+                              "key": "Date",
+                              "value": "Tue, 03 Feb 2026 05:25:50 GMT"
+                            },
+                            {
+                              "key": "Keep-Alive",
+                              "value": "timeout=60"
+                            },
+                            {
+                              "key": "Connection",
+                              "value": "keep-alive"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": null
                         }
                       ]
-                    }
-                  },
-                  "response": [
+                    },
                     {
-                      "name": "OK",
-                      "originalRequest": {
+                      "name": "partial Update Employee",
+                      "request": {
                         "method": "PATCH",
                         "header": [
                           {
@@ -301,7 +515,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
+                          "raw": "{\n  \"employeeFName\": \"put\",\n  \"employeeLName\": \"patch\",\n  \"department\": \"put\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -310,135 +524,327 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/employees/:Id",
+                          "raw": "{{baseUrl}}/api/v1/employees/:Id",
                           "host": [
                             "{{baseUrl}}"
                           ],
                           "path": [
                             "api",
+                            "v1",
                             "employees",
                             ":Id"
                           ],
                           "variable": [
                             {
                               "key": "Id",
-                              "value": "4688"
+                              "value": "1"
                             }
                           ]
                         }
                       },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "text",
-                      "header": [
+                      "response": [
                         {
-                          "key": "Content-Type",
-                          "value": "*/*"
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "PATCH",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/employees/:Id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "employees",
+                                ":Id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "Id",
+                                  "value": "3977"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
+                        },
+                        {
+                          "name": "partial Update Employee",
+                          "originalRequest": {
+                            "method": "PATCH",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"employeeFName\": \"put\",\n  \"employeeLName\": \"patch\",\n  \"department\": \"put\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/employees/:Id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "employees",
+                                ":Id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "Id",
+                                  "value": "1"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": null,
+                          "header": [
+                            {
+                              "key": "X-Content-Type-Options",
+                              "value": "nosniff"
+                            },
+                            {
+                              "key": "X-XSS-Protection",
+                              "value": "0"
+                            },
+                            {
+                              "key": "Cache-Control",
+                              "value": "no-cache, no-store, max-age=0, must-revalidate"
+                            },
+                            {
+                              "key": "Pragma",
+                              "value": "no-cache"
+                            },
+                            {
+                              "key": "Expires",
+                              "value": "0"
+                            },
+                            {
+                              "key": "X-Frame-Options",
+                              "value": "DENY"
+                            },
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "Transfer-Encoding",
+                              "value": "chunked"
+                            },
+                            {
+                              "key": "Date",
+                              "value": "Tue, 03 Feb 2026 05:27:01 GMT"
+                            },
+                            {
+                              "key": "Keep-Alive",
+                              "value": "timeout=60"
+                            },
+                            {
+                              "key": "Connection",
+                              "value": "keep-alive"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n    \"employeeFName\": \"put\",\n    \"employeeLName\": \"patch\",\n    \"department\": \"put\"\n}"
                         }
-                      ],
-                      "cookie": [],
-                      "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
+                      ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "name": "get All Employees",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "*/*"
-                  }
-                ],
-                "url": {
-                  "raw": "{{baseUrl}}/api/employees",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "api",
-                    "employees"
-                  ]
-                }
-              },
-              "response": [
+                },
                 {
-                  "name": "OK",
-                  "originalRequest": {
+                  "name": "get All Employees",
+                  "request": {
                     "method": "GET",
                     "header": [
+                      {
+                        "key": "X-API-VERSION",
+                        "value": "1"
+                      },
                       {
                         "key": "Accept",
                         "value": "*/*"
                       }
                     ],
                     "url": {
-                      "raw": "{{baseUrl}}/api/employees",
+                      "raw": "{{baseUrl}}/api/v1/employees",
                       "host": [
                         "{{baseUrl}}"
                       ],
                       "path": [
                         "api",
+                        "v1",
                         "employees"
                       ]
                     }
                   },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "text",
-                  "header": [
+                  "response": [
                     {
-                      "key": "Content-Type",
-                      "value": "*/*"
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-API-VERSION",
+                            "value": "1"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/employees",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "employees"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/org.roima.app-v1+json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "string"
+                    },
+                    {
+                      "name": "get All Employees",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-API-VERSION",
+                            "value": "1"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/employees",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "employees"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "0"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-cache, no-store, max-age=0, must-revalidate"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "0"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain;charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "21"
+                        },
+                        {
+                          "key": "Date",
+                          "value": "Tue, 03 Feb 2026 05:27:13 GMT"
+                        },
+                        {
+                          "key": "Keep-Alive",
+                          "value": "timeout=60"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "api-version-headers:1"
                     }
-                  ],
-                  "cookie": [],
-                  "body": "[\n  {\n    \"employeeFName\": \"string\",\n    \"employeeLName\": \"string\",\n    \"department\": \"string\"\n  },\n  {\n    \"employeeFName\": \"string\",\n    \"employeeLName\": \"string\",\n    \"department\": \"string\"\n  }\n]"
-                }
-              ]
-            },
-            {
-              "name": "create Employee",
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "*/*"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
-                  "options": {
-                    "raw": {
-                      "headerFamily": "json",
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{baseUrl}}/api/employees",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "api",
-                    "employees"
                   ]
-                }
-              },
-              "response": [
+                },
                 {
-                  "name": "OK",
-                  "originalRequest": {
+                  "name": "create Employee",
+                  "request": {
                     "method": "POST",
                     "header": [
                       {
@@ -461,27 +867,580 @@
                       }
                     },
                     "url": {
-                      "raw": "{{baseUrl}}/api/employees",
+                      "raw": "{{baseUrl}}/api/v1/employees",
                       "host": [
                         "{{baseUrl}}"
                       ],
                       "path": [
                         "api",
+                        "v1",
                         "employees"
                       ]
                     }
                   },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "text",
-                  "header": [
+                  "response": [
                     {
-                      "key": "Content-Type",
-                      "value": "*/*"
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/employees",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "employees"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
+                    },
+                    {
+                      "name": "create Employee",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"employeeFName\": \"new\",\n  \"employeeLName\": \"test\",\n  \"department\": \"create\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/employees",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "employees"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "0"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-cache, no-store, max-age=0, must-revalidate"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "0"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "Transfer-Encoding",
+                          "value": "chunked"
+                        },
+                        {
+                          "key": "Date",
+                          "value": "Tue, 03 Feb 2026 05:27:32 GMT"
+                        },
+                        {
+                          "key": "Keep-Alive",
+                          "value": "timeout=60"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n    \"employeeFName\": \"new\",\n    \"employeeLName\": \"test\",\n    \"department\": \"create\"\n}"
                     }
-                  ],
-                  "cookie": [],
-                  "body": "{\n  \"employeeFName\": \"string\",\n  \"employeeLName\": \"string\",\n  \"department\": \"string\"\n}"
+                  ]
+                },
+                {
+                  "name": "versioning params",
+                  "request": {
+                    "method": "GET",
+                    "header": []
+                  },
+                  "response": [
+                    {
+                      "name": "versioning params",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/employees?version=2",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "employees"
+                          ],
+                          "query": [
+                            {
+                              "key": "version",
+                              "value": "2",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "0"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-cache, no-store, max-age=0, must-revalidate"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "0"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain;charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "20"
+                        },
+                        {
+                          "key": "Date",
+                          "value": "Tue, 03 Feb 2026 05:21:02 GMT"
+                        },
+                        {
+                          "key": "Keep-Alive",
+                          "value": "timeout=60"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "api-version-params:2"
+                    }
+                  ]
+                },
+                {
+                  "name": "versioning header",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-API-VERSION",
+                        "value": "1",
+                        "type": "text"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/employees",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "employees"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "versioning header",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-API-VERSION",
+                            "value": "1",
+                            "type": "text"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/employees",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "employees"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "0"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-cache, no-store, max-age=0, must-revalidate"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "0"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain;charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "21"
+                        },
+                        {
+                          "key": "Date",
+                          "value": "Tue, 03 Feb 2026 05:22:03 GMT"
+                        },
+                        {
+                          "key": "Keep-Alive",
+                          "value": "timeout=60"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "api-version-headers:1"
+                    }
+                  ]
+                },
+                {
+                  "name": "versioning content negotiation",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-API-VERSION",
+                        "value": "1",
+                        "type": "text",
+                        "disabled": true
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/org.roima.app-v1+json",
+                        "type": "text"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/employees",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "employees"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "versioning content negotiation",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-API-VERSION",
+                            "value": "1",
+                            "type": "text",
+                            "disabled": true
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/org.roima.app-v1+json",
+                            "type": "text"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/employees",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "employees"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "0"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-cache, no-store, max-age=0, must-revalidate"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "0"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/org.roima.app-v1+json"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "32"
+                        },
+                        {
+                          "key": "Date",
+                          "value": "Tue, 03 Feb 2026 05:24:45 GMT"
+                        },
+                        {
+                          "key": "Keep-Alive",
+                          "value": "timeout=60"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "api-version-ContentNegotiation:2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "auth",
+              "item": [
+                {
+                  "name": "sign-in",
+                  "item": [
+                    {
+                      "name": "authenticate User",
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/auth/sign-in",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "auth",
+                            "sign-in"
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/auth/sign-in",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "sign-in"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "body": ""
+                        },
+                        {
+                          "name": "authenticate User",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/auth/sign-in",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "sign-in"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": null,
+                          "header": [
+                            {
+                              "key": "Set-Cookie",
+                              "value": "access_token=adksjlada_asdadsakda_asdlkasdjlkasjdla; Max-Age=120; Expires=Tue, 03 Feb 2026 05:29:47 GMT; Path=/; HttpOnly"
+                            },
+                            {
+                              "key": "X-Content-Type-Options",
+                              "value": "nosniff"
+                            },
+                            {
+                              "key": "X-XSS-Protection",
+                              "value": "0"
+                            },
+                            {
+                              "key": "Cache-Control",
+                              "value": "no-cache, no-store, max-age=0, must-revalidate"
+                            },
+                            {
+                              "key": "Pragma",
+                              "value": "no-cache"
+                            },
+                            {
+                              "key": "Expires",
+                              "value": "0"
+                            },
+                            {
+                              "key": "X-Frame-Options",
+                              "value": "DENY"
+                            },
+                            {
+                              "key": "Content-Length",
+                              "value": "0"
+                            },
+                            {
+                              "key": "Date",
+                              "value": "Tue, 03 Feb 2026 05:27:47 GMT"
+                            },
+                            {
+                              "key": "Keep-Alive",
+                              "value": "timeout=60"
+                            },
+                            {
+                              "key": "Connection",
+                              "value": "keep-alive"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": null
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -520,7 +1479,7 @@
                           "variable": [
                             {
                               "key": "Id",
-                              "value": "4688"
+                              "value": "3977"
                             }
                           ]
                         }
@@ -550,7 +1509,7 @@
                               "variable": [
                                 {
                                   "key": "Id",
-                                  "value": "4688"
+                                  "value": "3977"
                                 }
                               ]
                             }
@@ -603,7 +1562,7 @@
                           "variable": [
                             {
                               "key": "Id",
-                              "value": "4688"
+                              "value": "3977"
                             }
                           ]
                         }
@@ -643,7 +1602,7 @@
                               "variable": [
                                 {
                                   "key": "Id",
-                                  "value": "4688"
+                                  "value": "3977"
                                 }
                               ]
                             }
@@ -654,107 +1613,102 @@
                           "header": [],
                           "cookie": [],
                           "body": ""
+                        },
+                        {
+                          "name": "upload Profile Image",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "formdata",
+                              "formdata": [
+                                {
+                                  "key": "file",
+                                  "type": "file",
+                                  "uuid": "3d414aa0-0694-4827-a95a-8a12bbbac148",
+                                  "src": "/C:/Users/gujarabh/Pictures/Screenshots/Screenshot 2026-01-19 1928591.png"
+                                }
+                              ],
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/files/:Id/profile-img",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "files",
+                                ":Id",
+                                "profile-img"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "Id",
+                                  "value": "1"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": null,
+                          "header": [
+                            {
+                              "key": "X-Content-Type-Options",
+                              "value": "nosniff"
+                            },
+                            {
+                              "key": "X-XSS-Protection",
+                              "value": "0"
+                            },
+                            {
+                              "key": "Cache-Control",
+                              "value": "no-cache, no-store, max-age=0, must-revalidate"
+                            },
+                            {
+                              "key": "Pragma",
+                              "value": "no-cache"
+                            },
+                            {
+                              "key": "Expires",
+                              "value": "0"
+                            },
+                            {
+                              "key": "X-Frame-Options",
+                              "value": "DENY"
+                            },
+                            {
+                              "key": "Content-Length",
+                              "value": "0"
+                            },
+                            {
+                              "key": "Date",
+                              "value": "Tue, 03 Feb 2026 05:28:53 GMT"
+                            },
+                            {
+                              "key": "Keep-Alive",
+                              "value": "timeout=60"
+                            },
+                            {
+                              "key": "Connection",
+                              "value": "keep-alive"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": null
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "auth",
-          "item": [
-            {
-              "name": "sign-in",
-              "item": [
-                {
-                  "name": "authenticate User",
-                  "request": {
-                    "method": "POST",
-                    "header": [],
-                    "url": {
-                      "raw": "{{baseUrl}}/api/auth/sign-in",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "api",
-                        "auth",
-                        "sign-in"
-                      ]
-                    }
-                  },
-                  "response": [
-                    {
-                      "name": "OK",
-                      "originalRequest": {
-                        "method": "POST",
-                        "header": [],
-                        "url": {
-                          "raw": "{{baseUrl}}/api/auth/sign-in",
-                          "host": [
-                            "{{baseUrl}}"
-                          ],
-                          "path": [
-                            "api",
-                            "auth",
-                            "sign-in"
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "text",
-                      "header": [],
-                      "cookie": [],
-                      "body": ""
-                    },
-                    {
-                      "name": "authenticate User",
-                      "originalRequest": {
-                        "method": "POST",
-                        "header": [],
-                        "url": {
-                          "raw": "{{baseUrl}}/api/auth/sign-in",
-                          "host": [
-                            "{{baseUrl}}"
-                          ],
-                          "path": [
-                            "api",
-                            "auth",
-                            "sign-in"
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": null,
-                      "header": [
-                        {
-                          "key": "Set-Cookie",
-                          "value": "access_token=adksjlada_asdadsakda_asdlkasdjlkasjdla; Max-Age=120; Expires=Mon, 02 Feb 2026 14:15:04 GMT; Path=/; HttpOnly"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "0"
-                        },
-                        {
-                          "key": "Date",
-                          "value": "Mon, 02 Feb 2026 14:13:04 GMT"
-                        },
-                        {
-                          "key": "Keep-Alive",
-                          "value": "timeout=60"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        }
-                      ],
-                      "cookie": [],
-                      "body": null
                     }
                   ]
                 }
