@@ -43,9 +43,6 @@ public class UserService {
 
     public EmployeeDTO updateEmployee(Long id, EmployeeReqDTO dto) {
 
-        // ??? todo partial updates
-
-
         Employee exists = employeeRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Employee Not Found"));
 

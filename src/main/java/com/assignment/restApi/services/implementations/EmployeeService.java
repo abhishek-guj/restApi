@@ -17,13 +17,11 @@ import java.util.List;
 public class EmployeeService {
     private final EntityMapper entityMapper;
     private final EmployeeRepository employeeRepository;
-    private final ModelMapper modelMapper;
 
     @Autowired
     EmployeeService(EntityMapper entityMapper, EmployeeRepository employeeRepository, ModelMapper modelMapper) {
         this.entityMapper = entityMapper;
         this.employeeRepository = employeeRepository;
-        this.modelMapper = modelMapper;
     }
 
     public List<EmployeeDTO> getAllEmployees() {
@@ -32,7 +30,8 @@ public class EmployeeService {
     }
 
     public EmployeeDTO getEmployeeById(Long id) {
-        Employee employee = employeeRepository.findById(id).orElseThrow(()->new EmployeeNotFoundException("Employee Not Found"));
+        Employee employee = employeeRepository.findById(id)
+                .orElseThrow(()->new EmployeeNotFoundException());
         return entityMapper.toEmployeeDTO(employee);
     }
 
@@ -45,7 +44,7 @@ public class EmployeeService {
     public EmployeeDTO updateEmployee(Long id, EmployeeReqDTO dto) {
         
         Employee exists = employeeRepository.findById(id)
-                .orElseThrow(() -> new EmployeeNotFoundException("Employee Not Found"));
+                .orElseThrow(() -> new EmployeeNotFoundException());
 
         Employee employee = entityMapper.toEmployee(dto);
         employee.setId(exists.getId());
@@ -56,9 +55,7 @@ public class EmployeeService {
 
     public void deleteEmployee(Long id) {
         Employee employee = employeeRepository.findById(id)
-                .orElseThrow(() -> new EmployeeNotFoundException("Employee Not Found"));
-
-//        employee.set_deleted(true);
+                .orElseThrow(() -> new EmployeeNotFoundException());
         employeeRepository.delete(employee);
     }
 }

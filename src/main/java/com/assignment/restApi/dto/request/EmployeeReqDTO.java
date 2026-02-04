@@ -8,8 +8,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class EmployeeReqDTO {
-//    private Long id;
-//private Long id;
     @NotBlank(groups = {Employee.Update.class}, message = "fname is required")
     private String employeeFName;
     @NotBlank(message = "lname is required")

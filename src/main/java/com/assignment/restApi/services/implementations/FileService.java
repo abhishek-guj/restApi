@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
@@ -39,7 +40,7 @@ public class FileService {
         if (!Files.exists(uploadPath)) {
             Files.createDirectories(uploadPath);
         }
-        Employee emp = employeeRepository.findById(Id).orElseThrow(() -> new EmployeeNotFoundException("Employee Not found"));
+        Employee emp = employeeRepository.findById(Id).orElseThrow(() -> new EmployeeNotFoundException());
         String fileName = new String(emp.getId().toString() + "profile_img.png");
         Path filePath = uploadPath.resolve(fileName);
         Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
@@ -49,7 +50,7 @@ public class FileService {
     }
 
     public ResponseEntity<Resource> getProfileImage(Long Id) throws MalformedURLException {
-        Employee emp = employeeRepository.findById(Id).orElseThrow(() -> new EmployeeNotFoundException("Employee Not found"));
+        Employee emp = employeeRepository.findById(Id).orElseThrow(() -> new EmployeeNotFoundException());
         String fileName = new String(emp.getId().toString() + "profile_img.png");
         Path filePath = Paths.get(basePath).resolve(fileName);
         Resource resource = new UrlResource(filePath.toUri());
@@ -63,6 +64,14 @@ public class FileService {
                     .body(resource);
         } else {
             return ResponseEntity.notFound().build();
+        }
+    }
+
+    public void processFile(String filePath) {
+        try {
+            File file = new File(filePath);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

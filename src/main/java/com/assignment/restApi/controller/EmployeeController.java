@@ -67,9 +67,11 @@ public class EmployeeController {
 
     @PatchMapping("/{Id}")
     @Tag(name="employee CRUD")
-    public ResponseEntity<EmployeeDTO> partialUpdateEmployee(@PathVariable Long Id, @Validated(Employee.Update.class) @RequestBody EmployeeReqDTO dto) {
+    public ResponseEntity<EmployeeDTO> partialUpdateEmployee(
+            @PathVariable Long Id,
+            @Validated(Employee.Update.class)
+            @RequestBody EmployeeReqDTO dto) {
 
-        // ??? todo
         EmployeeDTO emp = employeeService.updateEmployee(Id, dto);
         return ResponseEntity.ok(emp);
     }
